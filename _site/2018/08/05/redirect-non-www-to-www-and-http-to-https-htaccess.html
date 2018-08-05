@@ -10,15 +10,15 @@
 <meta name="generator" content="Jekyll v3.8.3" />
 <meta property="og:title" content="Redirect non-www to www and http to https .htaccess" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Add code below to .htaccess file RewriteEngine On" />
-<meta property="og:description" content="Add code below to .htaccess file RewriteEngine On" />
+<meta name="description" content="Add code below to .htaccess file" />
+<meta property="og:description" content="Add code below to .htaccess file" />
 <link rel="canonical" href="http://localhost:4000/2018/08/05/redirect-non-www-to-www-and-http-to-https-htaccess.html" />
 <meta property="og:url" content="http://localhost:4000/2018/08/05/redirect-non-www-to-www-and-http-to-https-htaccess.html" />
 <meta property="og:site_name" content="Andyy.me" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-08-05T00:00:00+07:00" />
 <script type="application/ld+json">
-{"description":"Add code below to .htaccess file RewriteEngine On","@type":"BlogPosting","url":"http://localhost:4000/2018/08/05/redirect-non-www-to-www-and-http-to-https-htaccess.html","headline":"Redirect non-www to www and http to https .htaccess","dateModified":"2018-08-05T00:00:00+07:00","datePublished":"2018-08-05T00:00:00+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/08/05/redirect-non-www-to-www-and-http-to-https-htaccess.html"},"@context":"http://schema.org"}</script>
+{"description":"Add code below to .htaccess file","@type":"BlogPosting","url":"http://localhost:4000/2018/08/05/redirect-non-www-to-www-and-http-to-https-htaccess.html","headline":"Redirect non-www to www and http to https .htaccess","dateModified":"2018-08-05T00:00:00+07:00","datePublished":"2018-08-05T00:00:00+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/08/05/redirect-non-www-to-www-and-http-to-https-htaccess.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Andyy.me" />
@@ -48,10 +48,11 @@
   </nav>
 
   
-  <p class="title"><a href="/">Andyy.me</a></p>
+  <h1 class="title"><a href="/">Andyy.me</a></h1>
   
 
-  <p class="tag">Hi! I&#39;m Andy Christiawan, an Interactive front-end developer and DevOps. Focus on creative interaction and slick user interfaces.</p>
+  <p class="tag">Hi! I&#39;m Andy Christiawan, an Interactive front-end developer and DevOps. Focus on creative interaction and slick user interfaces. \n You can email me here: hello[at]andyy.me
+</p>
 </header>
 
 
@@ -75,7 +76,6 @@
 
 <span class="no">RewriteCond</span> <span class="sx">%{HTTPS}</span> <span class="n">off</span>
 <span class="no">RewriteRule</span> <span class="o">^</span><span class="p">(.</span><span class="nf">*</span><span class="p">)</span><span class="err">$</span> <span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="sx">%{HTTP_HOST}%{REQUEST_URI}</span> <span class="p">[</span><span class="no">L</span><span class="p">,</span><span class="no">R</span><span class="o">=</span><span class="mi">301</span><span class="p">]</span></code></pre></figure>
-
 
   </div>
 
