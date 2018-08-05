@@ -1,6 +1,6 @@
 ---
 layout:	post
-title:	"Redirect non-www to www and http to https .htaccess"
+title: "Redirect non-www to www and http to https .htaccess"
 ---
 Add code below to `.htaccess` file
 {% highlight ruby %}

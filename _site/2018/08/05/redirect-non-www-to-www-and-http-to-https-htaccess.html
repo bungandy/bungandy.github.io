@@ -68,13 +68,13 @@
   <div itemprop="articleBody">
     <p>Add code below to <code class="highlighter-rouge">.htaccess</code> file</p>
 
-<figure class="highlight"><pre><code class="language-shell" data-lang="shell">RewriteEngine On
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">RewriteEngine</span> <span class="no">On</span>
 
-RewriteCond %<span class="o">{</span>HTTP_HOST<span class="o">}</span> <span class="o">!</span>^www<span class="se">\.</span> <span class="o">[</span>NC]
-RewriteRule ^<span class="o">(</span>.<span class="k">*</span><span class="o">)</span><span class="nv">$ </span>http://www.%<span class="o">{</span>HTTP_HOST<span class="o">}</span>/<span class="nv">$1</span> <span class="o">[</span><span class="nv">R</span><span class="o">=</span>301,L]
+<span class="no">RewriteCond</span> <span class="sx">%{HTTP_HOST}</span> <span class="o">!^</span><span class="n">www</span><span class="p">\.</span> <span class="nf">[</span><span class="no">NC</span><span class="p">]</span>
+<span class="no">RewriteRule</span> <span class="o">^</span><span class="p">(.</span><span class="nf">*</span><span class="p">)</span><span class="err">$</span> <span class="n">http</span><span class="ss">:/</span><span class="o">/</span><span class="n">www</span><span class="p">.</span><span class="nf">%</span><span class="p">{</span><span class="no">HTTP_HOST</span><span class="p">}</span><span class="o">/</span><span class="vg">$1</span> <span class="p">[</span><span class="no">R</span><span class="o">=</span><span class="mi">301</span><span class="p">,</span><span class="no">L</span><span class="p">]</span>
 
-RewriteCond %<span class="o">{</span>HTTPS<span class="o">}</span> off
-RewriteRule ^<span class="o">(</span>.<span class="k">*</span><span class="o">)</span><span class="nv">$ </span>https://%<span class="o">{</span>HTTP_HOST<span class="o">}</span>%<span class="o">{</span>REQUEST_URI<span class="o">}</span> <span class="o">[</span>L,R<span class="o">=</span>301]</code></pre></figure>
+<span class="no">RewriteCond</span> <span class="sx">%{HTTPS}</span> <span class="n">off</span>
+<span class="no">RewriteRule</span> <span class="o">^</span><span class="p">(.</span><span class="nf">*</span><span class="p">)</span><span class="err">$</span> <span class="n">https</span><span class="ss">:/</span><span class="o">/</span><span class="sx">%{HTTP_HOST}%{REQUEST_URI}</span> <span class="p">[</span><span class="no">L</span><span class="p">,</span><span class="no">R</span><span class="o">=</span><span class="mi">301</span><span class="p">]</span></code></pre></figure>
 
 
   </div>
