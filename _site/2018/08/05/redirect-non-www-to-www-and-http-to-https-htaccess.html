@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Redirect non-www to www and http to https .htaccess | Andyy.me</title>
+<meta name="generator" content="Jekyll v3.8.3" />
+<meta property="og:title" content="Redirect non-www to www and http to https .htaccess" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Add code below to .htaccess file RewriteEngine On" />
+<meta property="og:description" content="Add code below to .htaccess file RewriteEngine On" />
+<link rel="canonical" href="http://localhost:4000/2018/08/05/redirect-non-www-to-www-and-http-to-https-htaccess.html" />
+<meta property="og:url" content="http://localhost:4000/2018/08/05/redirect-non-www-to-www-and-http-to-https-htaccess.html" />
+<meta property="og:site_name" content="Andyy.me" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-05T00:00:00+07:00" />
+<script type="application/ld+json">
+{"description":"Add code below to .htaccess file RewriteEngine On","@type":"BlogPosting","url":"http://localhost:4000/2018/08/05/redirect-non-www-to-www-and-http-to-https-htaccess.html","headline":"Redirect non-www to www and http to https .htaccess","dateModified":"2018-08-05T00:00:00+07:00","datePublished":"2018-08-05T00:00:00+07:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/08/05/redirect-non-www-to-www-and-http-to-https-htaccess.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Andyy.me" />
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+
+  <body>
+
+    <header class="site" role="banner">
+  <nav role="navigation">
+    
+      
+    
+      
+      <a href="/about/">About</a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </nav>
+
+  
+  <p class="title"><a href="/">Andyy.me</a></p>
+  
+
+  <p class="tag">Hi! I&#39;m Andy Christiawan, an Interactive front-end developer and DevOps. Focus on creative interaction and slick user interfaces.</p>
+</header>
+
+
+    <main aria-label="Content" role="main">
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header>
+    <h1 itemprop="name headline">Redirect non-www to www and http to https .htaccess</h1>
+    <p>
+      <time datetime="2018-08-05T00:00:00+07:00" itemprop="datePublished">Aug 5, 2018</time>
+    </p>
+  </header>
+
+  <div itemprop="articleBody">
+    <p>Add code below to <code class="highlighter-rouge">.htaccess</code> file</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">RewriteEngine On
+
+RewriteCond %<span class="o">{</span>HTTP_HOST<span class="o">}</span> <span class="o">!</span>^www<span class="se">\.</span> <span class="o">[</span>NC]
+RewriteRule ^<span class="o">(</span>.<span class="k">*</span><span class="o">)</span><span class="nv">$ </span>http://www.%<span class="o">{</span>HTTP_HOST<span class="o">}</span>/<span class="nv">$1</span> <span class="o">[</span><span class="nv">R</span><span class="o">=</span>301,L]
+
+RewriteCond %<span class="o">{</span>HTTPS<span class="o">}</span> off
+RewriteRule ^<span class="o">(</span>.<span class="k">*</span><span class="o">)</span><span class="nv">$ </span>https://%<span class="o">{</span>HTTP_HOST<span class="o">}</span>%<span class="o">{</span>REQUEST_URI<span class="o">}</span> <span class="o">[</span>L,R<span class="o">=</span>301]</code></pre></figure>
+
+
+  </div>
+
+</article>
+
+    </main>
+
+    <footer>
+  <p class="copyright"><small>Copyright &copy; 2018 <a href="mailto:"></a></small></p>
+
+  
+
+  
+</footer>
+
+
+  </body>
+
+</html>

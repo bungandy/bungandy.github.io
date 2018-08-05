@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% for post in site.posts %}
+<article class="summary" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <h3 itemprop="name headline">
+      <img draggable="false" class="emoji" alt="⭐" src="https://s.w.org/images/core/emoji/11/svg/2b50.svg"> <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </h3>
+    <!-- <p>
+      <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+    </p> -->
+  </header>
+</article>
+{% endfor %}
